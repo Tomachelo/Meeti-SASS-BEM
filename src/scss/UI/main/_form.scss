@@ -1,0 +1,39 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.search{
+    background-color: v.$lightGray;
+    padding: 5rem 0;
+
+    &__heading{
+        text-align: center;
+        color: v.$grey;
+    }
+}
+
+.form{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    @include m.desktop_small{ 
+        @include m.grid(4, 3rem);
+    }
+
+    &__input{
+        padding: 1.4rem;
+        border: 1px solid lighten(v.$grey, 50%);
+        margin-bottom: 2rem;
+
+        @include m.desktop_small{ 
+            margin-bottom: 0;
+        }
+    }
+
+    &__submit{
+        @include m.button(v.$colorPrimary, v.$white);
+        &{
+            margin-top: 0;
+        }
+    }
+}
