@@ -1,0 +1,16 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer{
+    margin: 5rem 0 0 0;
+
+    &__copyright{
+        max-width: 90%;
+        border-top: 1px solid lighten(v.$grey, 65%);
+        font-size: 1.4rem;
+        text-align: center;
+        margin: 3rem auto 2rem auto;
+        padding-top: 2rem;
+    }
+    
+}
