@@ -1,0 +1,42 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.categories{
+    background-color: v.$lightGray;
+
+    &__heading{
+        color: v.$grey;
+        text-align: center;
+        margin: 0;
+        padding: 4rem 0;
+    }
+
+    &__grid{
+        @include m.tablet{ 
+            @include m.grid(2, 3rem);
+        }
+
+        @include m.desktop_small{ 
+            @include m.grid(3, 2rem);
+        }
+    }
+}
+
+.category{
+    margin-bottom: 3rem;
+
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+
+    @include m.tablet{ 
+        margin-bottom: 0;
+    }
+
+    &__name{
+        text-align: center;
+        padding: 2rem 0;
+        margin: 0;
+        font-size: 2rem;
+    }
+}
